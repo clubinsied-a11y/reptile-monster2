@@ -8,40 +8,37 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:system-ui,-apple-system,sans-serif;background:#0b1026;color:#fff;line-height:1.6}
 a{text-decoration:none;color:inherit}
-
-/* 헤더 - 모바일 2줄 구조 */
-header{position:sticky;top:0;z-index:50;background:#0b1026;border-bottom:3px solid #c8ff00;padding:12px 16px 0}
-.topbar{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.logo{font-size:21px;font-weight:900;white-space:nowrap}
-.logo span{color:#c8ff00}
-.topbtn{background:#ffe600;color:#111;font-weight:900;font-size:13px;padding:10px 14px;border-radius:999px;white-space:nowrap;flex-shrink:0;border:2px solid #111;box-shadow:3px 3px 0 #111}
-.mainnav{display:flex;gap:8px;padding:12px 0}
-.mainnav a{flex:1;text-align:center;font-size:13px;font-weight:800;background:#1a234a;padding:10px 4px;border-radius:999px;white-space:nowrap}
-
-/* 히어로 */
-.hero{text-align:center;padding:40px 18px 34px;background:linear-gradient(180deg,#1a0b2e,#0b1026 55%,#ff6a00)}
-.hero-emoji{font-size:64px;line-height:1.1}
-.hero-badge{display:inline-block;background:#ff3d00;color:#fff;font-weight:900;font-size:12px;padding:7px 12px;border-radius:999px;margin:14px 0 8px}
-.hero h1{font-size:30px;line-height:1.25}
-.hero h1 em{color:#ffe600;font-style:normal}
-.hero p{font-size:14px;opacity:.9;max-width:560px;margin:12px auto 18px;word-break:keep-all}
-.hero-btns{display:flex;flex-direction:column;gap:10px;max-width:360px;margin:0 auto}
-.btn-big{display:block;padding:14px;border-radius:999px;font-weight:900;font-size:16px;text-align:center;border:3px solid #111;box-shadow:4px 4px 0 #111;white-space:nowrap}
+header{position:sticky;top:0;z-index:50;background:#0b1026;display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:3px solid #c8ff00}
+.logo-wrap{display:flex;align-items:center;gap:10px}
+.logo-icon{width:44px;height:44px;background:#c8ff00;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;border:3px solid #ff6a00;flex-shrink:0}
+.logo-t{font-size:20px;font-weight:900;white-space:nowrap;line-height:1}
+.logo-s{font-size:10px;letter-spacing:2px;color:#c8ff00;font-weight:900;white-space:nowrap}
+.hamburger{width:44px;height:44px;border-radius:50%;background:#fff;border:none;font-size:22px;cursor:pointer;flex-shrink:0}
+.mobile-menu{display:none;background:#0b1026;padding:12px 16px 16px;border-bottom:3px solid #c8ff00}
+.mobile-menu a{display:block;padding:13px;border-radius:12px;margin-bottom:8px;font-weight:800;text-align:center;background:#1a234a;color:#fff}
+.mobile-menu a.yellow{background:#ffe600;color:#111;font-weight:900}
+.hero{text-align:left;padding:28px 18px 30px;background:linear-gradient(180deg,#1a0b2e,#0b1026 55%,#ff6a00)}
+.hero-badge{display:inline-block;background:#c8ff00;color:#111;font-weight:900;font-size:13px;padding:10px 16px;border-radius:999px;border:3px solid #111;box-shadow:4px 4px 0 #ff6a00;white-space:nowrap}
+.hero h1{font-size:34px;line-height:1.2;margin:18px 0 12px;word-break:keep-all}
+.hero h1 .white{color:#fff}
+.hero h1 .yellow{color:#ffe600;text-shadow:3px 3px 0 #111}
+.hero p{font-size:15px;opacity:.95;line-height:1.6;word-break:keep-all}
+.hero-btns{margin-top:18px;display:flex;flex-direction:column;gap:10px;max-width:400px}
+.btn-big{display:block;padding:16px;border-radius:999px;font-weight:900;font-size:18px;text-align:center;border:3px solid #111;box-shadow:4px 4px 0 #ff6a00;white-space:nowrap}
 .btn-yellow{background:#ffe600;color:#111}
+.btn-row{display:flex;gap:10px}
+.btn-small{flex:1;padding:14px;border-radius:999px;font-weight:900;font-size:15px;text-align:center;border:3px solid #111;white-space:nowrap}
+.btn-white{background:#fff;color:#111}
 .btn-green{background:#c8ff00;color:#111}
-.hero-note{font-size:12px;margin-top:14px;opacity:.85}
-
-/* 마퀴 */
+.hero-checks{margin-top:18px;display:flex;flex-wrap:wrap;gap:8px}
+.hero-checks span{background:#1a234a;padding:8px 12px;border-radius:999px;font-size:12px;font-weight:800;white-space:nowrap}
 .marquee{overflow:hidden;background:#ffe600;color:#111;font-weight:900;padding:10px 0;white-space:nowrap}
 .marquee span{display:inline-block;animation:marq 16s linear infinite}
 @keyframes marq{from{transform:translateX(0)}to{transform:translateX(-50%)}}
-
-/* 섹션 공통 */
 section{max-width:1000px;margin:0 auto;padding:42px 18px}
-h2{font-size:26px;margin-bottom:6px}
-.sub{opacity:.8;font-size:14px;margin-bottom:18px;word-break:keep-all}
+h2{font-size:26px;margin-bottom:6px}.sub{opacity:.8;font-size:14px;margin-bottom:18px;word-break:keep-all}
 .grid{display:grid;grid-template-columns:1fr;gap:12px}
-@media(min-width:700px){.grid{grid-template-columns:1fr 1fr}.hero-btns{flex-direction:row;max-width:600px}.hero h1{font-size:42px}}
+@media(min-width:700px){.grid{grid-template-columns:1fr 1fr}.hero h1{font-size:42px}.hero-btns{max-width:520px}}
 .card{background:#fff;color:#111;border-radius:18px;padding:18px;cursor:pointer;border:3px solid #111}
 .card h3{font-size:17px;margin:6px 0}.card p{font-size:14px;opacity:.85}
 .card .detail{display:none;margin-top:10px;background:#fff8b0;padding:10px;border-radius:10px;font-size:13px}
@@ -55,138 +52,4 @@ h2{font-size:26px;margin-bottom:6px}
 .leader{background:#111;text-align:center;border:3px solid #ffe600;border-radius:22px;padding:30px 18px}
 .leader h2{color:#ffe600;font-size:28px;word-break:keep-all}
 .quiz{background:#fff;color:#111;border-radius:22px;padding:20px}
-.level-btn{padding:10px 12px;border-radius:999px;border:2px solid #111;font-weight:900;cursor:pointer;background:#eee;margin:3px;font-size:13px;white-space:nowrap}
-.level-btn.active{background:#ffe600}.level-btn.locked{opacity:.45}
-.opt{display:block;width:100%;text-align:left;background:#f4f4f4;border:2px solid #ddd;border-radius:12px;padding:12px;margin:8px 0;cursor:pointer;font-weight:700;font-size:14px}
-.opt.correct{background:#c8ff00}.opt.wrong{background:#ffb3b3}
-input,select,textarea{width:100%;padding:12px;border-radius:12px;border:2px solid #ddd;font-size:15px;margin-bottom:10px}
-.btn-submit{background:#ffe600;color:#111;padding:14px;border-radius:999px;font-weight:900;border:3px solid #111;width:100%;cursor:pointer;font-size:16px}
-footer{padding:22px;text-align:center;opacity:.7;font-size:13px}
-</style>
-</head>
-<body>
-
-<header>
-  <div class="topbar">
-    <div class="logo">🦎 랩틸<span>몬스터</span></div>
-    <a class="topbtn" href="#quiz">🔥 팀원 응시 하기</a>
-  </div>
-  <nav class="mainnav">
-    <a href="#service">서비스</a>
-    <a href="#process">절차</a>
-    <a href="#quiz">팀원 시험</a>
-    <a href="#contact">상담 신청</a>
-  </nav>
-</header>
-
-<div class="hero">
-  <div class="hero-emoji">🦸‍♂️🦎</div>
-  <div class="hero-badge">CITES 전문 • 서류 • 운송 • 검역</div>
-  <h1>복잡한 CITES 절차,<br><em>몬스터가 다 잡아줄게!</em></h1>
-  <p>서류부터 운송, 검역까지! 고질라급 난이도도 OK. 파충류 전문팀 랩틸몬스터가 출동합니다.</p>
-  <div class="hero-btns">
-    <a class="btn-big btn-yellow" href="#contact">무료 상담 출동!</a>
-    <a class="btn-big btn-green" href="#quiz">팀원 응시 하기</a>
-  </div>
-  <p class="hero-note">💬 고질라가 불을 뿜어도, 서류는 우리가 막아준다!</p>
-</div>
-
-<div class="marquee"><span>CITES 허가 • 서류 대행 • 해외 운송 • 검역 통과 • 통관 • 컨설팅 •&nbsp;&nbsp;CITES 허가 • 서류 대행 • 해외 운송 • 검역 통과 • 통관 • 컨설팅 •&nbsp;&nbsp;</span></div>
-
-<section id="service">
-<h2>🛡️ 몬스터 서비스</h2><p class="sub">카드를 누르면 자세히 펼쳐져요.</p>
-<div class="grid">
-<div class="card" onclick="this.classList.toggle('open')"><div style="font-size:32px">📄</div><h3>CITES 허가 서류 대행</h3><p>부속서 등급 확인부터 신청까지 전부 대행</p><div class="detail">학명 하나까지 꼼꼼히 체크! 종 / 국가별 허가 요건이 달라서, 먼저 등급부터 확인해드려요.</div></div>
-<div class="card" onclick="this.classList.toggle('open')"><div style="font-size:32px">✈️</div><h3>해외 운송 & 통관</h3><p>온도 유지, 안전한 박스, 통관까지</p><div class="detail">파충류 공항 컨셉으로 안전하게! 온도 유지 + 스트레스 최소화 운송이 핵심입니다.</div></div>
-<div class="card" onclick="this.classList.toggle('open')"><div style="font-size:32px">🛃</div><h3>검역 & 입국 절차</h3><p>서류-실물 일치 체크, 거절 없는 검역</p><div class="detail">검역에서 가장 많이 보는 건 건강 상태와 서류 일치 여부! 미리 체크리스트로 준비해요.</div></div>
-<div class="card" onclick="this.classList.toggle('open')"><div style="font-size:32px">💬</div><h3>컨설팅 & 서류 검토</h3><p>이미 준비한 서류가 맞는지 확인</p><div class="detail">이 종은 가능한지, 이 서류로 되는지? 처음이신 분은 여기서 방향부터 잡으세요.</div></div>
-</div>
-</section>
-
-<section id="process">
-<h2>🚀 출동 절차 - 5단계 퀘스트</h2><p class="sub">상담부터 검역 클리어까지, 몬스터가 함께 갑니다.</p>
-<div class="step"><b>1</b><div><strong>상담 접수</strong><br>어떤 동물, 어디서 어디로? 사진과 함께 알려주세요.</div></div>
-<div class="step"><b>2</b><div><strong>서류 체크</strong><br>CITES 등급, 필요 서류, 리스크를 싹 정리해드려요.</div></div>
-<div class="step"><b>3</b><div><strong>허가 신청</strong><br>수출국 / 수입국 허가 신청 대행. 진행 상황 공유!</div></div>
-<div class="step"><b>4</b><div><strong>운송 출동</strong><br>안전한 박스 + 온도 관리 + 통관. 몬스터가 동행해요.</div></div>
-<div class="step"><b>5</b><div><strong>검역 클리어!</strong><br>검역 통과하면 미션 완료! 🎉</div></div>
-</section>
-
-<section>
-<h2>🦎 파충류 도감</h2><p class="sub">칩을 눌러보세요!</p>
-<div>
-<span class="chip active" onclick="showPet(0,this)">도마뱀 / 게코</span>
-<span class="chip" onclick="showPet(1,this)">카멜레온</span>
-<span class="chip" onclick="showPet(2,this)">뱀</span>
-<span class="chip" onclick="showPet(3,this)">거북</span>
-</div>
-<div class="card" id="petBox" style="margin-top:14px;cursor:default"><h3>🦎 도마뱀 / 게코</h3><p>레오파드 게코, 크레스티드 게코 등 가장 문의가 많아요.</p></div>
-</section>
-
-<section>
-<h2>❓ 자주 묻는 질문</h2>
-<div class="faq" onclick="this.classList.toggle('open')"><b>Q. CITES가 뭐예요?</b><div class="a">멸종위기 야생동식물의 국제거래를 규제하는 협약이에요. 등급에 따라 허가가 필요해요.</div></div>
-<div class="faq" onclick="this.classList.toggle('open')"><b>Q. 얼마나 걸려요?</b><div class="a">종과 국가에 따라 달라요. 보통 서류 준비부터 허가까지 수주 정도 생각하시면 돼요.</div></div>
-<div class="faq" onclick="this.classList.toggle('open')"><b>Q. 개인도 가능해요?</b><div class="a">네! 개인, 브리더, 샵 모두 가능해요. 처음이시면 컨설팅부터 추천해요.</div></div>
-<div class="faq" onclick="this.classList.toggle('open')"><b>Q. 서류가 없으면요?</b><div class="a">일단 상담 주세요. 어떤 서류가 필요한지, 만들 수 있는지부터 확인해드려요.</div></div>
-<div class="faq" onclick="this.classList.toggle('open')"><b>Q. 비용은 어떻게 돼요?</b><div class="a">동물 종류 / 국가 / 서비스 범위에 따라 달라요. 상담 후 견적 드려요.</div></div>
-</section>
-
-<section id="quiz">
-<h2>🎮 우리 팀이 되어볼래?</h2><p class="sub">팀원 시험 응시 - 1.2.3 레벨 테스트 필수! 다 통과해야 팀원이 될 수 있어요.</p>
-<div class="quiz">
-<div style="text-align:center"><button class="btn-submit" onclick="startQuiz()">🔥 팀원 응시 하기 🔥</button><p id="quizStatus" style="margin-top:10px;font-weight:800">아직 응시 전입니다. 버튼을 눌러 시작하세요!</p></div>
-<div style="margin-top:12px"><button class="level-btn active" id="btnL1" onclick="setLevel(1)">LEVEL 1 새싹</button><button class="level-btn locked" id="btnL2" onclick="setLevel(2)">LEVEL 2 출동 🔒</button><button class="level-btn locked" id="btnL3" onclick="setLevel(3)">LEVEL 3 최대장급 🔒</button></div>
-<div id="quizBox"></div><div id="resultBox"></div>
-</div>
-</section>
-
-<section>
-<div class="leader">
-<div style="font-size:52px">🦖</div>
-<p style="color:#c8ff00;font-weight:900">REPTILE MONSTER TEAM</p>
-<h2>랩틸몬스터팀 책임장 최재필 (최대장)</h2>
-<p style="opacity:.85;margin-top:10px">CITES 절차부터 운송, 검역까지 최대장이 직접 책임지고 챙깁니다.</p>
-</div>
-</section>
-
-<section id="contact">
-<h2>📩 상담 신청</h2><p class="sub">어떤 동물이든, 먼저 물어보세요.</p>
-<form onsubmit="submitForm(event)">
-<input placeholder="이름 / 업체명" required>
-<input placeholder="연락처 (전화 / 카톡 ID)" required>
-<select><option>도마뱀 / 게코</option><option>카멜레온</option><option>뱀</option><option>거북</option><option>기타</option></select>
-<select><option>CITES 허가 서류 대행</option><option>해외 운송 & 통관</option><option>검역 & 입국 절차</option><option>컨설팅 / 서류 검토</option></select>
-<textarea rows="4" placeholder="어떤 동물을, 어디서 어디로 보내고 싶으세요?"></textarea>
-<button class="btn-submit" type="submit">몬스터 출동 요청하기</button>
-<p id="formDone" style="display:none;font-weight:900;color:#0a7a00;margin-top:10px">✅ 출동 완료! 몬몬이가 달려가고 있어요! 곧 연락드릴게요.</p>
-</form>
-</section>
-
-<footer>© 랩틸몬스터 - CITES 파충류 절차 전문팀 | 불 뿜는 서류도 우리가 막아줄게!</footer>
-
-<script>
-const pets=[
-{title:"🦎 도마뱀 / 게코",desc:"레오파드 게코, 크레스티드 게코 등 가장 문의가 많아요."},
-{title:"🦎 카멜레온",desc:"온도 / 습도 관리가 생명! 운송 조건을 세밀하게 맞춰요."},
-{title:"🐍 뱀",desc:"볼파이톤, 콘스네이크 등. 안전한 포장이 핵심이에요."},
-{title:"🐢 거북",desc:"육지거북 / 수생거북, CITES 등급 확인이 특히 중요해요."}
-];
-function showPet(i,el){document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));el.classList.add('active');document.getElementById('petBox').innerHTML='<h3>'+pets[i].title+'</h3><p>'+pets[i].desc+'</p>';}
-const levels={
-1:[{q:"CITES는 무엇을 규제하는 협약일까?",opts:["멸종위기 야생동식물 국제거래","항공권 가격","애완동물 사료","동물원 입장료"],ans:0},{q:"파충류를 해외로 보낼 때 가장 먼저 확인할 것은?",opts:["CITES 부속서 등급","동물 이름","케이지 색깔","사육자 나이"],ans:0},{q:"운송 중 파충류에게 가장 중요한 것은?",opts:["적정 온도 유지","음악 틀어주기","조명 파티","간식 많이 주기"],ans:0}],
-2:[{q:"CITES 1급 종을 거래하려면?",opts:["수출국·수입국 양쪽 허가 필요","허가 없이 가능","구두 약속만으로 가능","SNS 인증만으로 가능"],ans:0},{q:"서류에 학명이 틀리면?",opts:["통관 거절 / 다시 신청","그냥 통과","벌금만 내면 통과","다음에 수정"],ans:0},{q:"검역에서 가장 많이 체크하는 것은?",opts:["건강 상태와 서류 일치 여부","동물 귀여움","사육장 크기","주인 패션"],ans:0}],
-3:[{q:"허가 없이 CITES 종을 반입하면?",opts:["압수 및 법적 처벌","경고만","바로 반환","칭찬"],ans:0},{q:"운송 박스에 꼭 표시해야 할 것은?",opts:["취급주의·온도·생물 정보","스티커만","주인 이름만","색깔만"],ans:0},{q:"랩틸몬스터팀의 철칙은?",opts:["서류 실수 제로, 동물 스트레스 최소화","빨리빨리 대충","서류 나중에","동물은 알아서"],ans:0}]
-};
-let currentLevel=1,qIndex=0,score=0,started=false,cleared={1:false,2:false,3:false};
-function startQuiz(){started=true;currentLevel=1;qIndex=0;score=0;document.getElementById('quizStatus').textContent="LEVEL 1 도전 중! 3문제 다 맞혀야 클리어!";render();document.getElementById('quiz').scrollIntoView({behavior:'smooth'});}
-function setLevel(l){if(!started){alert("먼저 팀원 응시 하기 버튼을 눌러주세요!");return;}if(l>1&&!cleared[l-1]){alert("이전 레벨을 먼저 클리어해야 해요!");return;}currentLevel=l;qIndex=0;score=0;render();}
-function render(){document.querySelectorAll('.level-btn').forEach((b,i)=>{const lv=i+1;b.classList.toggle('active',lv===currentLevel);b.classList.toggle('locked',lv>1&&!cleared[lv-1]);});const box=document.getElementById('quizBox');const res=document.getElementById('resultBox');if(qIndex>=levels[currentLevel].length)return;const q=levels[currentLevel][qIndex];box.innerHTML='<h3>LEVEL '+currentLevel+' - '+(qIndex+1)+'번 문제</h3><p style="font-size:17px;font-weight:800;margin:10px 0">'+q.q+'</p>'+q.opts.map((o,i)=>'<button class="opt" onclick="answer('+i+',this)">'+(i+1)+'. '+o+'</button>').join('');res.innerHTML='<p>점수: '+score+' / '+levels[currentLevel].length+'</p>';}
-function answer(i,el){const q=levels[currentLevel][qIndex];const btns=document.querySelectorAll('.opt');btns.forEach(b=>b.disabled=true);if(i===q.ans){el.classList.add('correct');score++;}else{el.classList.add('wrong');btns[q.ans].classList.add('correct');}setTimeout(()=>{qIndex++;if(qIndex>=levels[currentLevel].length){finishLevel();}else{render();}},700);}
-function finishLevel(){const box=document.getElementById('quizBox');const res=document.getElementById('resultBox');if(score===levels[currentLevel].length){cleared[currentLevel]=true;if(currentLevel===3){box.innerHTML="";res.innerHTML='<h2>🎉 합격! 당신은 랩틸몬스터 팀원입니다!</h2><p>최대장이 인정했어요! 이름을 입력하면 팀원증을 만들어드려요.</p><input id="memberName" placeholder="이름 입력" style="margin:10px 0"><button class="btn-submit" onclick="makeCard()">팀원증 만들기</button><div id="cardBox"></div>';}else{res.innerHTML='<h3>✅ LEVEL '+currentLevel+' CLEAR!</h3><p>다음 레벨이 열렸어요!</p><button class="btn-submit" onclick="setLevel('+(currentLevel+1)+')">다음 레벨 가기</button>';box.innerHTML="";}}else{res.innerHTML='<h3>아쉬워요! '+score+' / '+levels[currentLevel].length+'</h3><p>다시 도전해볼까요?</p><button class="btn-submit" onclick="setLevel('+currentLevel+')">다시 도전</button>';box.innerHTML="";}}
-function makeCard(){const n=document.getElementById('memberName').value||"몬스터 팀원";document.getElementById('cardBox').innerHTML='<div style="margin-top:14px;background:#0b1026;color:#fff;padding:20px;border-radius:16px;text-align:center"><div style="font-size:40px">🦎</div><h3>'+n+' 님</h3><p>랩틸몬스터 팀원 • 최대장 인정</p><p style="font-size:12px;opacity:.7">LEVEL 1-2-3 ALL CLEAR</p></div>';}
-function submitForm(e){e.preventDefault();document.getElementById('formDone').style.display='block';}
-render();
-</script>
-</body>
-</html>
+.level-btn{padding:10px 12px;border-radius:999px;border:2px solid #111;font-weight:900;cursor:pointer;background:#eee;margin:3px;font-size:13px
